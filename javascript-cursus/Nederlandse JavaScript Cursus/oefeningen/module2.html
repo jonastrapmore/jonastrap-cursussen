@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module 2 — Oplossingen (variabelen en datatypes)</title>
+  </head>
+  <body>
+    <h1>Module 2 — open de console (F12)</h1>
+
+    <script>
+      // ===== Oefening 1: persoonsgegevens met een template literal =====
+      const voornaam = "Jonas";
+      const achternaam = "Trap";
+      const geboorteJaar = 1987;
+      console.log(`Ik ben ${voornaam} ${achternaam} en ben geboren in ${geboorteJaar}.`);
+
+      // ===== Oefening 2: boodschappen-rekensom =====
+      const broodPrijs = 2.5;
+      const aantalBroden = 3;
+      const melkPrijs = 1.2;
+      const aantalMelk = 2;
+      let totaalPrijs = aantalBroden * broodPrijs + aantalMelk * melkPrijs;
+      console.log(`Totaal: € ${totaalPrijs.toFixed(2)}`);
+
+      // ===== Oefening 3: verzendkosten erbij (+=) =====
+      totaalPrijs += 4.95;
+      console.log(`Met verzendkosten: € ${totaalPrijs.toFixed(2)}`);
+
+      // ===== Oefening 4: type-puzzel (getal vs. tekst) =====
+      console.log(7 + 2); // 9   -> twee getallen: optellen
+      console.log("7" + 2); // "72" -> tekst + getal: plakken
+      console.log(Number("7") + 2); // 9   -> "7" eerst naar getal
+      console.log(7 + " katten"); // "7 katten" -> getal + tekst: plakken
+
+      // ===== Oefening 5: const kan niet veranderen, let wel =====
+      const max = 10;
+      // max = 20;            // <-- dit zou crashen: "Assignment to constant variable."
+      let teller = 10;
+      teller = 20; // met let mag het wel
+      console.log(`max = ${max}, teller = ${teller}`);
+    </script>
+  </body>
+</html>

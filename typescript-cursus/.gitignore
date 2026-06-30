@@ -1,0 +1,13 @@
+# Build-output (gegenereerd door tsc)
+oefeningen/dist/
+dist/
+
+# Afhankelijkheden
+node_modules/
+
+# Editor / OS
+.DS_Store
+*.log
+
+# Interne planningsnotities (niet publiceren)
+_Cursus notities (niet publiceren).md

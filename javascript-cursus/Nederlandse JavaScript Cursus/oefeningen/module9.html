@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module 9 — Oplossingen (browser-API's)</title>
+  </head>
+  <body>
+    <h1>Module 9 — open de console (F12)</h1>
+
+    <!-- Oefening 1: naam onthouden -->
+    <p>
+      <input id="inputNaam" type="text" placeholder="Uw naam" />
+      <button id="btnNaam">Naam wegschrijven</button>
+    </p>
+    <p id="pNaam"></p>
+
+    <!-- Oefening 3 & 4: takenlijst -->
+    <p>
+      <input id="taakveld" type="text" placeholder="Nieuwe taak" />
+      <button id="voegToe">Toevoegen</button>
+      <button id="wissen">Alles wissen</button>
+    </p>
+    <ul id="takenlijst"></ul>
+
+    <script>
+      // Hulpmethode: eerste letter hoofdletter, rest klein.
+      function metHoofdletter(tekst) {
+        return tekst.charAt(0).toUpperCase() + tekst.slice(1).toLowerCase();
+      }
+
+      // ===== Oefening 1: een naam onthouden in localStorage =====
+      const inputNaam = document.querySelector("#inputNaam");
+      const btnNaam = document.querySelector("#btnNaam");
+      const pNaam = document.querySelector("#pNaam");
+
+      btnNaam.addEventListener("click", () => {
+        const naam = inputNaam.value;
+        if (naam === "") {
+          return;
+        }
+        localStorage.setItem("Naam", metHoofdletter(naam));
+      });
+
+      // Bij het laden: toon de opgeslagen naam als die bestaat.
+      const opgeslagenNaam = localStorage.getItem("Naam");
+      pNaam.textContent = opgeslagenNaam
+        ? `Welkom terug, ${opgeslagenNaam}!`
+        : "Welkom!";
+
+      // ===== Oefening 2: een object bewaren (JSON.stringify / parse) =====
+      const persoon = { naam: "Jonas", leeftijd: 39, favKleur: "rood" };
+      localStorage.setItem("persoon", JSON.stringify(persoon));
+      const terug = JSON.parse(localStorage.getItem("persoon"));
+      console.log("Favoriete kleur:", terug.favKleur); // "rood"
+
+      // ===== Oefening 3 & 4: takenlijst die bewaard blijft + wissen =====
+      const taakveld = document.querySelector("#taakveld");
+      const voegToeKnop = document.querySelector("#voegToe");
+      const wissenKnop = document.querySelector("#wissen");
+      const takenlijst = document.querySelector("#takenlijst");
+
+      let taken = JSON.parse(localStorage.getItem("taken")) || [];
+
+      function toonTaken() {
+        takenlijst.innerHTML = "";
+        for (const taak of taken) {
+          const item = document.createElement("li");
+          item.textContent = taak;
+          takenlijst.appendChild(item);
+        }
+      }
+
+      voegToeKnop.addEventListener("click", () => {
+        const tekst = taakveld.value;
+        if (tekst === "") {
+          return;
+        }
+        taken.push(tekst);
+        localStorage.setItem("taken", JSON.stringify(taken));
+        taakveld.value = "";
+        toonTaken();
+      });
+
+      // Oefening 4: alles wissen (array leeg + localStorage + scherm)
+      wissenKnop.addEventListener("click", () => {
+        taken = [];
+        localStorage.removeItem("taken");
+        takenlijst.innerHTML = "";
+      });
+
+      toonTaken(); // toon bestaande taken bij het laden
+
+      // ===== Oefening 5: de locatie opvragen (geolocation) =====
+      navigator.geolocation.getCurrentPosition(
+        (positie) => {
+          // De data is er pas hier, in de succes-callback (asynchroon!).
+          console.log("Breedtegraad:", positie.coords.latitude);
+          console.log("Lengtegraad:", positie.coords.longitude);
+        },
+        (fout) => {
+          console.log("Geen locatie:", fout.message);
+        },
+      );
+    </script>
+  </body>
+</html>

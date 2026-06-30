@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module 4 — Oplossingen (beslissingen en loops)</title>
+  </head>
+  <body>
+    <h1>Module 4 — open de console (F12)</h1>
+
+    <script>
+      // ===== Oefening 1: toegangscontrole (early return) =====
+      function magNaarBinnen(leeftijd) {
+        if (leeftijd >= 18) {
+          return "Welkom";
+        }
+        return "Te jong";
+      }
+      console.log(magNaarBinnen(15)); // "Te jong"
+      console.log(magNaarBinnen(18)); // "Welkom"
+
+      // ===== Oefening 2: even of oneven (modulo) =====
+      function evenOfOneven(getal) {
+        if (getal % 2 === 0) {
+          return "even";
+        }
+        return "oneven";
+      }
+      console.log(evenOfOneven(4)); // "even"
+      console.log(evenOfOneven(7)); // "oneven"
+
+      // ===== Oefening 3: cijferbeoordeling (if / else if / else) =====
+      function cijferBeoordeling(cijfer) {
+        if (cijfer <= 4) {
+          return "onvoldoende";
+        } else if (cijfer === 5) {
+          return "voldoende";
+        } else {
+          return "goed";
+        }
+      }
+      console.log(cijferBeoordeling(3)); // "onvoldoende"
+      console.log(cijferBeoordeling(5)); // "voldoende"
+      console.log(cijferBeoordeling(8)); // "goed"
+
+      // ===== Oefening 4: tel met een for-loop tot 10 =====
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+
+      // ===== Oefening 5: som van een lijst =====
+      const prijzen = [10, 25, 5, 40];
+      let totaal = 0;
+      for (const prijs of prijzen) {
+        totaal += prijs;
+      }
+      console.log(`Totaal: ${totaal}`); // 80
+
+      // ===== Oefening 6: loop + beslissing gecombineerd =====
+      const leeftijden = [12, 20, 17, 30, 16];
+      function meerderjarigOfNiet(leeftijd) {
+        if (leeftijd < 18) {
+          return `${leeftijd} -> minderjarig`;
+        }
+        return `${leeftijd} -> meerderjarig`;
+      }
+      for (const leeftijd of leeftijden) {
+        console.log(meerderjarigOfNiet(leeftijd));
+      }
+    </script>
+  </body>
+</html>

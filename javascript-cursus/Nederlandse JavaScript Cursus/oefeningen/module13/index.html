@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module examen JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="index.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#" id="home-nav">GRAND MUSEUM</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" id="collection-nav"><a class="nav-link" href="#">Collections</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME Page --->
+<header class="hero-section text-center home-page">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Art is the Journey of a Free Soul</h1>
+        <p class="lead mb-4">Explore centuries of human creativity and history in the heart of the city.</p>
+    </div>
+</header>
+
+<section class="bg-light info-section flex-grow-1 align-items-center home-page">
+    <div class="container text-center grow">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Hours</h3>
+                <p>Tue–Sun: 10am – 6pm<br>Closed Mondays</p>
+            </div>
+            <div class="col-md-4 border-start border-end">
+                <h3>Location</h3>
+                <p>123 Culture Way<br>Art District, NY 10001</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Admission</h3>
+                <p>Adults: $25<br>Students & Seniors: $15</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COLLECTION Page --->
+
+<!-- hidden -->
+<header class="collection-page m-4" hidden>
+    <div class="d-flex justify-content-between align-items-center w-100 mb-4">
+        <h3>Collection</h3>
+        <button class="btn btn-primary" id="add-button">+ Add Artifact</button>
+    </div>
+
+    <div class="mb-3">
+        <label for="search" class="visually-hidden">Search the collections</label>
+        <input id="search" type="search" class="form-control" placeholder="Search by artifact name or era">
+    </div>
+</header>
+
+<!-- hidden -->
+<section class="collection-page m-4" id="artifacts-container" hidden>
+
+    <!-- TEMPLATE Code voor een artefact. --->
+    <template>
+        <div class="artifact">
+            <img class="artifact-img" src="images/tibetan-copper-prayer-wheel.jpg" alt="Tibetan Copper Prayer Wheel" />
+
+            <div class="status">On Display</div>
+
+            <div class="metadata">
+                <div class="header">
+                    <div>
+                        <h5>Tibetan Prayer Wheel</h5>
+                        <p>Qing Dynasty</p>
+                    </div>
+                    <button class="btn">
+                        <img src="images/trash.svg" height="16" width="16" alt="delete-icon">
+                    </button>
+                </div>
+                <p>A copper prayer wheel adorned with Sanskrit inscriptions and turquoise inlays.</p>
+            </div>
+        </div>
+    </template>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>

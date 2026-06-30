@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module 3 — Oplossingen (functies, methodes en objecten)</title>
+  </head>
+  <body>
+    <h1>Module 3 — open de console (F12)</h1>
+
+    <script>
+      // ===== Oefening 1: functie met return =====
+      function oppervlakte(breedte, hoogte) {
+        return breedte * hoogte;
+      }
+      console.log(oppervlakte(4, 5)); // 20
+
+      // ===== Oefening 2: BTW-functie (21%, afgerond op 2 decimalen) =====
+      function metBtw(prijs) {
+        return (prijs * 1.21).toFixed(2);
+      }
+      console.log(metBtw(100)); // "121.00"
+
+      // ===== Oefening 3: zelfde berekening als arrow function (korte vorm) =====
+      const oppervlakte2 = (breedte, hoogte) => breedte * hoogte;
+      console.log(oppervlakte2(4, 5)); // 20
+
+      // ===== Oefening 4: object maken + zin met template literal =====
+      const boek = {
+        titel: "De ontdekking van de hemel",
+        auteur: "Harry Mulisch",
+        aantalPaginas: 912,
+      };
+      console.log(
+        `${boek.titel} van ${boek.auteur} heeft ${boek.aantalPaginas} pagina's.`,
+      );
+
+      // ===== Oefening 5: methode toevoegen die this gebruikt =====
+      boek.beschrijving = function () {
+        return `${this.titel} van ${this.auteur} heeft ${this.aantalPaginas} pagina's.`;
+      };
+      console.log(boek.beschrijving());
+
+      // ===== Oefening 6: string-methodes verkennen =====
+      const tekst = "JavaScript is leuk";
+      console.log(tekst.length); // 18  -> aantal tekens
+      console.log(tekst.toUpperCase()); // "JAVASCRIPT IS LEUK"
+      console.log(tekst.toLowerCase()); // "javascript is leuk"
+      console.log(tekst.includes("leuk")); // true
+    </script>
+  </body>
+</html>

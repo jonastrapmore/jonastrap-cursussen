@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 8 - Ajax en JSON</title>
+  </head>
+
+  <body>
+    <h1>Hallo!</h1>
+    <button id="laad">Laad posts</button>
+    <ul id="lijst"></ul>
+
+    <script>
+      // Het webadres van de test-API op één plek (zo hoef je het maar één keer te wijzigen).
+      const API = "https://jsonplaceholder.typicode.com";
+
+      // Elementen die we nodig hebben, bovenaan opgezocht.
+      const laadKnop = document.querySelector("#laad");
+      const lijst = document.querySelector("#lijst");
+
+      // --- Oefening 1: JSON omzetten ---------------------------------------
+      const persoon = { naam: "Jonas Trap", leeftijd: 39 };
+      const persoonAlsTekst = JSON.stringify(persoon); // object -> JSON-tekst
+      console.log(persoonAlsTekst);
+
+      const persoonTerug = JSON.parse(persoonAlsTekst); // JSON-tekst -> object
+      console.log(persoonTerug.naam);
+
+      // --- Oefening 2 & 3: één gebruiker ophalen, met foutafhandeling -------
+      async function haalGebruikerOp(id) {
+        try {
+          const reactie = await fetch(`${API}/users/${id}`);
+          if (!reactie.ok) {
+            throw new Error(`server gaf status ${reactie.status}`);
+          }
+          const gebruiker = await reactie.json();
+          console.log(`${gebruiker.name} (${gebruiker.email})`);
+        } catch (fout) {
+          console.log("Er ging iets mis:", fout.message);
+        }
+      }
+
+      // --- Oefening 4 & 5: posts ophalen en tonen --------------------------
+      async function laadPosts() {
+        try {
+          const reactie = await fetch(`${API}/posts`);
+          if (!reactie.ok) {
+            throw new Error(`server gaf status ${reactie.status}`);
+          }
+          const posts = await reactie.json();
+          toonPosts(posts.slice(0, 5)); // alleen de eerste 5
+        } catch (fout) {
+          lijst.textContent = "Kon de posts niet laden.";
+        }
+      }
+
+      // Toont een lijst posts op de pagina. Weet niets van fetchen: alleen tonen.
+      function toonPosts(posts) {
+        lijst.innerHTML = ""; // eerst leegmaken
+        for (const post of posts) {
+          const item = document.createElement("li");
+          item.textContent = post.title;
+          lijst.appendChild(item);
+        }
+      }
+
+      // --- Opstarten -------------------------------------------------------
+      haalGebruikerOp(1);
+
+      laadKnop.addEventListener("click", () => {
+        laadPosts();
+      });
+    </script>
+  </body>
+</html>

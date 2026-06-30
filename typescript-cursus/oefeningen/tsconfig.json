@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",          // hier staan jouw .ts-bestanden
+    "outDir": "./dist",          // hier komt de gecompileerde .js terecht
+    "target": "esnext",          // naar welke JavaScript-versie we vertalen (modern)
+    "module": "commonjs",        // outputvorm die Node rechtstreeks kan draaien
+    "moduleDetection": "force",  // behandel ELK bestand als eigen module (geen naam-botsingen)
+    "strict": true,              // alle strenge typecontroles aan (heel belangrijk!)
+    "noEmitOnError": true,       // bij een typefout: maak GEEN .js aan
+    "removeComments": true       // laat commentaar weg uit de gecompileerde .js
+  }
+}

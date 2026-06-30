@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 10 - Debugging</title>
+  </head>
+
+  <body>
+    <h1>Open de console (F12)</h1>
+
+    <script>
+      // ===== Oefening 2: console-methodes =====
+      const personen = [
+        { naam: "Jonas", leeftijd: 39 },
+        { naam: "Sara", leeftijd: 25 },
+        { naam: "Tom", leeftijd: 31 },
+      ];
+
+      console.table(personen); // toont de array netjes als tabel
+      console.warn("Dit is een waarschuwing"); // gele waarschuwing
+      console.error("Dit is een (onschuldige) foutmelding"); // rode melding
+
+      // ===== Oefening 3: try / catch / finally =====
+      try {
+        const data = JSON.parse("dit is geen json"); // dit mislukt
+        console.log(data);
+      } catch (fout) {
+        console.error("Ongeldige JSON:", fout.message);
+      } finally {
+        console.log("controle afgerond"); // draait altijd
+      }
+
+      // ===== Oefening 4: zelf een fout opwerpen met throw =====
+      function leeftijdCheck(leeftijd) {
+        if (leeftijd < 0) {
+          throw new Error("Leeftijd mag niet negatief zijn");
+        }
+        return leeftijd;
+      }
+
+      try {
+        console.log(leeftijdCheck(30)); // 30 -> ok
+        console.log(leeftijdCheck(-5)); // -5 -> gooit een fout
+        console.log("deze regel wordt overgeslagen na de fout");
+      } catch (fout) {
+        console.error("Fout bij leeftijdcheck:", fout.message);
+      }
+
+      // ===== Oefening 5: breakpoint-oefening =====
+      // Zet in DevTools (tabblad Sources) een breakpoint op een regel binnen
+      // deze functie, ververs, en zweef met je muis over a, b en resultaat.
+      // (Of zet 'debugger;' erin om hier automatisch te pauzeren.)
+      function bereken(a, b) {
+        const som = a + b;
+        const product = a * b;
+        const resultaat = som + product;
+        return resultaat;
+      }
+
+      console.log("bereken(3, 4) =", bereken(3, 4)); // 3+4 + 3*4 = 19
+
+      // ===== Oefening 1: een fout lezen (als laatste, want hij stopt het script) =====
+      // Type:      TypeError
+      // Boodschap: Cannot read properties of null (setting 'textContent')
+      // Plek:      de regel met 'el.textContent' hieronder
+      // Oorzaak:   #bestaatniet bestaat niet -> querySelector geeft null terug,
+      //            en null heeft geen textContent.
+      const el = document.querySelector("#bestaatniet");
+      el.textContent = "hoi"; // gooit de TypeError
+    </script>
+  </body>
+</html>

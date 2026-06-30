@@ -1,0 +1,102 @@
+.hero-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3");
+  background-size: cover;
+  color: white;
+  padding: 150px 0;
+}
+
+.info-section {
+  display: flex;
+}
+
+#artifacts-container {
+  display: grid;
+  gap: 1.5em;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 28rem);
+}
+
+.artifact {
+  width: 28rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  background-color: #fff;
+  display: flex;
+  gap: 1em;
+
+  .artifact-img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .lucide {
+      width: 14px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: small;
+      color: #73716b;
+    }
+  }
+
+  .status {
+    z-index: 20;
+    position: absolute;
+    background-color: #262626;
+    color: #fff;
+    padding: 0.25em;
+    font-size: x-small;
+    width: 10rem;
+    border-top-left-radius: 15px;
+    text-align: center;
+  }
+
+  .metadata {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5em;
+
+    & > p {
+      flex: 1;
+      margin-top: 0.5em;
+    }
+
+    .footer {
+      font-size: smaller;
+      display: flex;
+      justify-content: space-between;
+      color: #73716b;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        .lucide {
+          width: 10px;
+          margin-right: 0.2em;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: small;
+  }
+
+  .delete-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer; /* optioneel: maak duidelijk het klikbaar is */
+  }
+  
+}

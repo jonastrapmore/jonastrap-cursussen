@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module 5 — Oplossingen (de DOM)</title>
+    <style>
+      .gemarkeerd {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titel">Hallo</h1>
+    <p class="intro">Dit is een paragraaf.</p>
+    <p class="intro">Dit is nog een paragraaf.</p>
+    <button id="knop">Klik mij</button>
+
+    <!-- Script onderaan: dan bestaan de elementen al wanneer het draait. -->
+    <script>
+      // ===== Oefening 1: de titel wijzigen (op id) =====
+      const titel = document.querySelector("#titel");
+      titel.textContent = "Welkom Jonas";
+
+      // ===== Oefening 2: alle .intro-paragrafen aanpassen (loop) =====
+      const intros = document.querySelectorAll(".intro");
+      for (const p of intros) {
+        p.textContent = "Aangepast door JavaScript";
+      }
+
+      // ===== Oefening 3: de titel markeren met een class =====
+      titel.classList.add("gemarkeerd");
+
+      // ===== Oefening 4: een lijst opbouwen uit een array =====
+      const hobbys = ["petanque", "wandelen", "pokeren", "programmeren"];
+      const lijst = document.createElement("ul");
+      for (const hobby of hobbys) {
+        const item = document.createElement("li");
+        item.textContent = hobby;
+        lijst.appendChild(item);
+      }
+      document.body.appendChild(lijst);
+
+      // ===== Oefening 5: een foutmelding leren lezen =====
+      // De regels hieronder staan bewust uitgecommentarieerd, want ze crashen:
+      //   const leeg = document.querySelector("#bestaatniet"); // -> null
+      //   leeg.textContent = "hoi";
+      // Foutmelding: TypeError: Cannot set properties of null (setting 'textContent')
+      // Oorzaak: #bestaatniet bestaat niet -> querySelector geeft null terug,
+      //          en null heeft geen textContent.
+    </script>
+  </body>
+</html>

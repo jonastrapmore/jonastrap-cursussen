@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module 6 — Oplossingen (events)</title>
+    <style>
+      .gemarkeerd {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titel">Klik op de knop</h1>
+    <button id="knop">Klik mij</button>
+
+    <p>
+      <input id="naamveld" type="text" placeholder="Typ je naam" />
+    </p>
+    <p id="uitvoer"></p>
+
+    <form id="mijnform">
+      <input id="email" type="text" placeholder="E-mail" />
+      <button type="submit">Versturen</button>
+    </form>
+
+    <script>
+      const titel = document.querySelector("#titel");
+      const knop = document.querySelector("#knop");
+      const naamveld = document.querySelector("#naamveld");
+      const uitvoer = document.querySelector("#uitvoer");
+      const form = document.querySelector("#mijnform");
+
+      // ===== Oefening 1: klik-teller =====
+      let teller = 0; // buiten de functie -> behoudt zijn waarde
+      knop.addEventListener("click", () => {
+        teller++;
+        titel.textContent = `Aantal kliks: ${teller}`;
+      });
+
+      // ===== Oefening 2: live begroeting tijdens het typen =====
+      naamveld.addEventListener("input", () => {
+        uitvoer.textContent = `Hallo, ${naamveld.value}!`;
+      });
+
+      // ===== Oefening 3: markeren bij hover (class togglen) =====
+      titel.addEventListener("mouseover", () => {
+        titel.classList.add("gemarkeerd");
+      });
+      titel.addEventListener("mouseout", () => {
+        titel.classList.remove("gemarkeerd");
+      });
+
+      // ===== Oefening 4: welke toets is ingedrukt? =====
+      document.addEventListener("keydown", (event) => {
+        console.log(`Je drukte op: ${event.key}`);
+      });
+
+      // ===== Oefening 5: formulier versturen zonder herladen =====
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // voorkom dat de pagina herlaadt
+        const email = document.querySelector("#email").value;
+        uitvoer.textContent = `Verstuurd: ${email}`;
+      });
+    </script>
+  </body>
+</html>
