@@ -239,4 +239,4 @@ Deze module is **hands-on setup**: je werkt niet in één `.ts`-bestand, maar me
 
 Klaar? In **Module 11** duiken we in het **gegeven framework**: we ontleden `CustomElement`, `Page`
 en de `Router` regel voor regel, zodat je precies snapt wat ze doen. Daarna zetten we de eerste
-examenvraag op: routing + navbar + één item renderen.
+examenvraag op: routing + navbar.

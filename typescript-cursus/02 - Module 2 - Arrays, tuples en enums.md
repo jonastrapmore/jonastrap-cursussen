@@ -55,7 +55,7 @@ let b: Array<number> = [1, 2, 3]; // identiek
 ```
 
 `number[]` is het meest gebruikt en het kortst, gebruik die. Goed om de andere te herkennen.
-(De `< >`-notatie kom je later weer tegen bij **generics**, Module 7.)
+(De `< >`-notatie kom je later weer tegen bij **generics**, Module 8.)
 
 ## 2. Door een getypte array loopen
 

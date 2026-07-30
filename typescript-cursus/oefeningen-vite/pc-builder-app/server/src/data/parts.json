@@ -1,0 +1,140 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "name": "Intel Core i9-14900K",
+    "price": 589.99,
+    "category": "CPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "name": "AMD Ryzen 9 7950X",
+    "price": 699.99,
+    "category": "CPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "name": "Intel Core i5-14600K",
+    "price": 289.99,
+    "category": "CPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440004",
+    "name": "AMD Ryzen 5 7600X",
+    "price": 249.99,
+    "category": "CPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440005",
+    "name": "NVIDIA RTX 4090",
+    "price": 1899.99,
+    "category": "GPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440006",
+    "name": "AMD RX 7900 XTX",
+    "price": 999.99,
+    "category": "GPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440007",
+    "name": "NVIDIA RTX 4070 Ti",
+    "price": 749.99,
+    "category": "GPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440008",
+    "name": "AMD RX 7700 XT",
+    "price": 449.99,
+    "category": "GPU"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440009",
+    "name": "Corsair Vengeance 32GB DDR5",
+    "price": 149.99,
+    "category": "RAM"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440010",
+    "name": "G.Skill Trident Z5 16GB DDR5",
+    "price": 89.99,
+    "category": "RAM"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440011",
+    "name": "Kingston Fury Beast 64GB DDR5",
+    "price": 229.99,
+    "category": "RAM"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440012",
+    "name": "Samsung 990 Pro 2TB NVMe",
+    "price": 179.99,
+    "category": "Opslag"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440013",
+    "name": "WD Black SN850X 1TB NVMe",
+    "price": 119.99,
+    "category": "Opslag"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440014",
+    "name": "Seagate Barracuda 4TB HDD",
+    "price": 89.99,
+    "category": "Opslag"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440015",
+    "name": "Noctua NH-D15",
+    "price": 99.99,
+    "category": "Koeling"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440016",
+    "name": "Corsair H150i Elite 360mm",
+    "price": 179.99,
+    "category": "Koeling"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440017",
+    "name": "be quiet! Dark Rock Pro 4",
+    "price": 79.99,
+    "category": "Koeling"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440018",
+    "name": "Seasonic Focus GX 1000W",
+    "price": 189.99,
+    "category": "Voeding"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440019",
+    "name": "be quiet! Straight Power 850W",
+    "price": 149.99,
+    "category": "Voeding"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440020",
+    "name": "Corsair RM750x",
+    "price": 129.99,
+    "category": "Voeding"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440021",
+    "name": "Fractal Design Torrent",
+    "price": 189.99,
+    "category": "Behuizing"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440022",
+    "name": "Lian Li PC-O11 Dynamic",
+    "price": 139.99,
+    "category": "Behuizing"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440023",
+    "name": "NZXT H7 Flow",
+    "price": 119.99,
+    "category": "Behuizing"
+  }
+]

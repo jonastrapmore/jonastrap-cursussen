@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>
+        Quiz builder
+    </h1>
+
+    <div class="d-flex flex-column gap-2">
+        <div class="border rounded p-1 flex-grow-1">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" checked type="radio" name="questionTypes" id="multiple-choice"
+                       value="multiple-choice">
+                <label class="form-check-label" for="multiple-choice">Multiple Choice</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="questionTypes" id="true-false" value="true-false">
+                <label class="form-check-label" for="true-false">True / False</label>
+            </div>
+
+        </div>
+        <select class="form-select" aria-label="Default select example" id="difficulty-filter">
+            <option selected value="all">All Questions</option>
+            <option value="easy">Easy Questions</option>
+            <option value="medium">Medium Questions</option>
+            <option value="hard">Hard Questions</option>
+        </select>
+
+        <div class="d-flex gap-2">
+            <input type="text" class="form-control" id="quiz-name" placeholder="Quiz name" aria-label="Quiz name">
+            <button class="btn btn-primary" id="create-quiz" style="min-width: 12rem;" disabled>Create quiz</button>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column gap-2 mt-2" id="questions">
+    </div>
+
+</div>

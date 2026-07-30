@@ -57,12 +57,16 @@ We beginnen bewust met `tsc` (puur de taal), en stappen later over naar Vite/pnp
 | 8 | Generics + veelgebruikte utility types (`Partial`, `Pick`, `Omit`, `Record`) | tsc |
 | 9 | Modules, tsconfig & configuratie | tsc |
 | 10 | Overstap naar Vite + pnpm | Vite/pnpm |
-| 11 | (volgt) DOM met TypeScript & componenten | Vite/pnpm |
-| 12 | (volgt) Data management (fetch, persistence providers) | Vite/pnpm |
-| 13 | (volgt) Router & multipage-architectuur | Vite/pnpm |
-| 14 | (volgt) Declaratiebestanden (`.d.ts`) | Vite/pnpm |
-| 15 | (volgt) IDE-functies (kort) | n.v.t. |
-| Einde | (volgt) Eindexamen & oplossingen (examen-app) | Vite/pnpm |
+| 11 | Het framework (CustomElement, Page, Router) + routing & navbar | Vite/pnpm |
+| 12 | Data ophalen & renderen (providers, observer) + filteren/verwijderen | Vite/pnpm |
+| 13 | Collecties: custom events, localStorage & tweede pagina | Vite/pnpm |
+| 14 | Declaratiebestanden (`.d.ts`) | Vite/pnpm |
+| 15 | IDE-functies (kort) | n.v.t. |
+| 16 | Eindexamen: aanpak & het universele recept | Vite/pnpm |
+| 17 | Oefenexamen: Webshop (uitgewerkt, stap voor stap) | Vite/pnpm |
+| 18 | Oefenexamen: Quiz builder (uitgewerkt, stap voor stap) | Vite/pnpm |
+| 19 | Slotwoord | — |
+| Bijlage | Handleiding examen (stappenplan, naslag) | — |
 
 ## Hoe je deze cursus gebruikt
 

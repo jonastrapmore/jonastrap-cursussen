@@ -1,0 +1,122 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "name": "Laptop",
+    "price": 899.99,
+    "category": "Electronics"
+  },
+  {
+    "id": "6f1e2d3a-8b4f-4c2b-9a1e-2d3a8b4f4c2b",
+    "name": "Headphones",
+    "price": 79.99,
+    "category": "Accessories"
+  },
+  {
+    "id": "3c2b1a4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+    "name": "Coffee Mug",
+    "price": 14.99,
+    "category": "Kitchenware"
+  },
+  {
+    "id": "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p",
+    "name": "Notebook",
+    "price": 4.99,
+    "category": "Stationery"
+  },
+  {
+    "id": "9c0d1e2f-3g4h-5i6j-7k8l9m0n1o2p3q4r",
+    "name": "Smartphone",
+    "price": 699.99,
+    "category": "Electronics"
+  },
+  {
+    "id": "1e2f3g4h-5i6j-7k8l-9m0n1o2p3q4r5s6t",
+    "name": "Tablet",
+    "price": 699.99,
+    "category": "Electronics"
+  },
+  {
+    "id": "5i6j7k8l-9m0n1o2p-3q4r5s6t7u8v9w0x",
+    "name": "Gaming Mouse",
+    "price": 59.99,
+    "category": "Accessories"
+  },
+  {
+    "id": "9m0n1o2p-3q4r5s6t-7u8v9w0x1y2z3a4b",
+    "name": "Water Bottle",
+    "price": 12.99,
+    "category": "Kitchenware"
+  },
+  {
+    "id": "3q4r5s6t-7u8v9w0x-1y2z3a4b5c6d7e8f",
+    "name": "Desk Lamp",
+    "price": 39.99,
+    "category": "Stationery"
+  },
+  {
+    "id": "7u8v9w0x-1y2z3a4b-5c6d7e8f9g0h1i2j",
+    "name": "Smartwatch",
+    "price": 249.99,
+    "category": "Electronics"
+  },
+  {
+    "id": "1y2z3a4b-5c6d7e8f-9g0h1i2j3k4l5m6n",
+    "name": "Bluetooth Speaker",
+    "price": 89.99,
+    "category": "Accessories"
+  },
+  {
+    "id": "5c6d7e8f-9g0h1i2j-3k4l5m6n7o8p9q0r",
+    "name": "Cutlery Set",
+    "price": 29.99,
+    "category": "Kitchenware"
+  },
+  {
+    "id": "9g0h1i2j-3k4l5m6n-7o8p9q0r1s2t3u4v",
+    "name": "Planner",
+    "price": 19.99,
+    "category": "Stationery"
+  },
+  {
+    "id": "3k4l5m6n-7o8p9q0r-1s2t3u4v5w6x7y8z",
+    "name": "Monitor",
+    "price": 199.99,
+    "category": "Electronics"
+  },
+  {
+    "id": "7o8p9q0r-1s2t3u4v-5w6x7y8z9a0b1c2d",
+    "name": "Keyboard",
+    "price": 49.99,
+    "category": "Accessories"
+  },
+  {
+    "id": "1s2t3u4v-5w6x7y8z-9a0b1c2d3e4f5g6h",
+    "name": "Cooking Pan",
+    "price": 24.99,
+    "category": "Kitchenware"
+  },
+  {
+    "id": "5w6x7y8z-9a0b1c2d-3e4f5g6h7i8j9k0l",
+    "name": "Sticky Notes",
+    "price": 4.99,
+    "category": "Stationery"
+  },
+  {
+    "id": "9a0b1c2d-3e4f5g6h-7i8j9k0l1m2n3o4p",
+    "name": "External Hard Drive",
+    "price": 129.99,
+    "category": "Electronics"
+  },
+  {
+    "id": "3e4f5g6h-7i8j9k0l-1m2n3o4p5q6r7s8t",
+    "name": "Wireless Charger",
+    "price": 39.99,
+    "category": "Accessories"
+  },
+  {
+    "id": "7i8j9k0l-1m2n3o4p-5q6r7s8t9u0v1w2x",
+    "name": "Blender",
+    "price": 59.99,
+    "category": "Kitchenware"
+  }
+]
