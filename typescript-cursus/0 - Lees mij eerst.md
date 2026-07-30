@@ -50,8 +50,8 @@ We beginnen bewust met `tsc` (puur de taal), en stappen later over naar Vite/pnp
 | 1 | Type-annotaties, inference, basistypes | tsc |
 | 2 | Arrays, tuples, enums | tsc |
 | 3 | Functies met types | tsc |
-| 4 | (volgt) Objecten, type aliases, interfaces | tsc |
-| 5 | (volgt) Union- & intersection-types, literals, narrowing | tsc |
+| 4 | Objecten, type aliases, interfaces | tsc |
+| 5 | Union- & intersection-types, literals, narrowing | tsc |
 | 6 | (volgt) Classes | tsc |
 | 7 | (volgt) Type modifiers (readonly, optioneel, access, `as const`) | tsc |
 | 8 | (volgt) Generics + veelgebruikte utility types (`Partial`, `Pick`, `Omit`, `Record`) | tsc |
