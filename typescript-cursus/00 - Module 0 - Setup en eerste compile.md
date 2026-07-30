@@ -61,9 +61,46 @@ types. Vindt hij een typefout, dan klaagt hij, en (met de juiste instelling) maa
 
 ## 4. Installeren
 
-Je hebt **Node.js** nodig (dat brengt `npm` en `npx` mee). In deze cursus gebruiken we **pnpm**
-als pakketbeheerder, een populair, snel alternatief dat veel projecten en opleidingen
-gebruiken. Liever `npm`? Dat werkt ook; vervang dan overal `pnpm` door `npm`.
+### 4.1 Node.js
+
+Je hebt eerst **Node.js** nodig. Dat is de omgeving die JavaScript (en dus je gecompileerde
+TypeScript) buiten de browser laat draaien, en het brengt meteen **`npm`** en **`npx`** mee.
+Download de **LTS**-versie van [nodejs.org](https://nodejs.org) en installeer die. Controleer
+daarna in een **nieuwe** terminal:
+
+```bash
+node --version   # bv. v22.x.x
+npm --version    # bv. 10.x.x
+```
+
+Krijg je een versienummer te zien, dan staat Node goed.
+
+### 4.2 pnpm
+
+In deze cursus gebruiken we **pnpm** als pakketbeheerder: een populair, snel en zuinig alternatief
+voor `npm`, dat veel projecten, opleidingen én de examens gebruiken. Node brengt een handige
+installer mee (*Corepack*), dus meestal volstaat één commando:
+
+```bash
+corepack enable pnpm     # zet pnpm aan (komt met Node mee)
+```
+
+Lukt dat niet, installeer pnpm dan globaal via npm:
+
+```bash
+npm install -g pnpm
+```
+
+Controleer:
+
+```bash
+pnpm --version   # bv. 10.x.x
+```
+
+> Liever gewoon `npm` gebruiken? Dat mag: vervang dan overal in de cursus `pnpm` door `npm` (en
+> `pnpm add` door `npm install`). Alle voorbeelden werken met beide.
+
+### 4.3 TypeScript
 
 TypeScript installeer je als ontwikkel-gereedschap. Twee manieren:
 
@@ -132,8 +169,8 @@ Stap voor stap, in je oefenmap:
    Je `console.log` verschijnt meteen in de terminal, geen browser nodig. Werk je aan een
    ander bestand? Draai dan dat bestand: `node dist/module1.js`, enzovoort.
 
-> Waarom Node en geen browser? Voor het léren van de taal (Module 1–8) draaien we kleine
-> stukjes code met `console.log`. Node draait die direct, zonder HTML-gedoe. Vanaf Module 9
+> Waarom Node en geen browser? Voor het léren van de taal (Module 1–9) draaien we kleine
+> stukjes code met `console.log`. Node draait die direct, zonder HTML-gedoe. Vanaf Module 10
 > (waar we apps bouwen) keren we terug naar de browser, dan met een echte dev-server.
 
 ### Handig: laat de compiler meekijken
@@ -183,8 +220,8 @@ Een veelgestelde vraag: wanneer gebruik je `tsc` en wanneer `pnpm`/Vite? Het ant
   bundeling, puur jij en de types. Zo zie je precies wat TypeScript doet.
 - **Later, voor echte apps (zoals het examen):** **Vite + pnpm**. Vite doet het compileren én
   het bundelen én geeft je een live dev-server (`pnpm dev`) met automatisch herladen. In zo'n
-  project draai je `tsc` niet meer met de hand; Vite regelt het. (We maken die overstap rond
-  Module 9.)
+  project draai je `tsc` niet meer met de hand; Vite regelt het. (We maken die overstap in
+  Module 10.)
 
 Voor nu: **alles in deze beginmodules doe je met `tsc`.** Onthoud dat, dan raak je niet in de
 war als andere cursussen of ik over `tsc` praten.
@@ -197,7 +234,7 @@ war als andere cursussen of ik over `tsc` praten.
 - De **`tsconfig.json`** stuurt de compiler: `rootDir` (src) → `outDir` (dist), met
   **`strict: true`** aan.
 - Workflow: schrijf `.ts` in `src/` → `tsc` (of `tsc --watch`) → laad de `.js` uit `dist/`.
-- **Nu leer je met `tsc`; vanaf Module 9 stappen we over op Vite + pnpm** voor echte projecten.
+- **Nu leer je met `tsc`; vanaf Module 10 stappen we over op Vite + pnpm** voor echte projecten.
 
 ## Oefeningen
 

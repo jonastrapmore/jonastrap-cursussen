@@ -55,8 +55,8 @@ We beginnen bewust met `tsc` (puur de taal), en stappen later over naar Vite/pnp
 | 6 | Classes | tsc |
 | 7 | Type modifiers (readonly, optioneel, access, `as const`) | tsc |
 | 8 | Generics + veelgebruikte utility types (`Partial`, `Pick`, `Omit`, `Record`) | tsc |
-| 9 | (volgt) Modules, tsconfig & configuratie | tsc |
-| 10 | (volgt) Overstap naar Vite + pnpm | Vite/pnpm |
+| 9 | Modules, tsconfig & configuratie | tsc |
+| 10 | Overstap naar Vite + pnpm | Vite/pnpm |
 | 11 | (volgt) DOM met TypeScript & componenten | Vite/pnpm |
 | 12 | (volgt) Data management (fetch, persistence providers) | Vite/pnpm |
 | 13 | (volgt) Router & multipage-architectuur | Vite/pnpm |
