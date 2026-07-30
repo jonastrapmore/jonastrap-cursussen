@@ -1,0 +1,173 @@
+/* =========================================================================
+   Huisstijl overgenomen van jonastrap.be (navy + oranje accent),
+   plus cursus-specifieke opmaak (zijbalk, inhoud, code).
+   ========================================================================= */
+
+:root {
+  --primary-color: #2c3e50; /* navy */
+  --primary-hover: #e67e22; /* oranje accent */
+  --background-color: #e6eef5; /* lichte, koele achtergrond */
+}
+
+[data-bs-theme="dark"] {
+  --background-color: #1a1d24; /* diepe donkergrijs */
+  --primary-color: #34465c; /* iets lichtere navy voor donkere modus */
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+/* ===== Merkkleur-utilities (zoals op de hoofdsite) ===== */
+.trap-bg-primary {
+  background-color: var(--primary-color);
+}
+.trap-bg-accent {
+  background-color: var(--primary-hover);
+}
+.trap-text-primary {
+  color: var(--primary-color);
+}
+.trap-text-accent {
+  color: var(--primary-hover);
+}
+[data-bs-theme="dark"] .trap-text-primary {
+  color: #e8edf3; /* navy is te donker als tekst op donker -> licht maken */
+}
+
+/* ===== Navbar (navy merk, oranje hover) ===== */
+.navbar-brand {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+  color: var(--primary-hover);
+}
+[data-bs-theme="dark"] .navbar-brand {
+  color: #e8edf3;
+}
+
+/* De thema-knop volgt dezelfde kleur + oranje hover als de hoofdsite. */
+.navbar #theme-toggle {
+  color: var(--primary-color);
+  border: none;
+  background: transparent;
+  transition: color 0.3s ease;
+}
+.navbar #theme-toggle:hover {
+  color: var(--primary-hover);
+}
+[data-bs-theme="dark"] .navbar #theme-toggle {
+  color: #e8edf3;
+}
+[data-bs-theme="dark"] .navbar #theme-toggle:hover {
+  color: var(--primary-hover);
+}
+
+/* ===== Zijbalk ===== */
+@media (min-width: 992px) {
+  .sidebar {
+    position: sticky;
+    top: var(--navbar-hoogte, 56px); /* net onder de navbar */
+    height: calc(100vh - var(--navbar-hoogte, 56px));
+    overflow-y: auto;
+  }
+  /* Bootstrap zet de offcanvas-body op desktop op display:flex (rij) met padding 0.
+     Wij willen de zoekbalk en de modulelijst netjes ONDER elkaar, met wat lucht. */
+  .sidebar .offcanvas-body {
+    display: block;
+    padding: 1rem;
+  }
+}
+
+#module-list .nav-link {
+  color: var(--bs-body-color);
+  border-radius: 0.375rem;
+  padding: 0.4rem 0.6rem;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+#module-list .nav-link:hover {
+  color: var(--primary-hover); /* oranje hover, net als de hoofdsite */
+  background-color: var(--bs-secondary-bg);
+}
+/* De actieve (huidige) module: navy vlak met witte tekst. */
+#module-list .nav-link.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Het vinkje voor 'gelezen' modules */
+.read-check {
+  color: var(--primary-hover);
+  margin-right: 0.35rem;
+}
+
+/* ===== Cursusinhoud ===== */
+.content {
+  max-width: 1080px; /* breder dan voorheen */
+  margin-inline: auto; /* en gecentreerd in de kolom */
+  line-height: 1.65;
+}
+.content h1,
+.content h2,
+.content h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+.content h1 {
+  color: var(--primary-color);
+}
+[data-bs-theme="dark"] .content h1 {
+  color: #e8edf3;
+}
+.content h2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--primary-hover); /* oranje accentlijn */
+}
+
+/* Codeblokken (marked zet code in <pre><code>) */
+.content pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto; /* alleen scrollen als afbreken écht niet kan */
+}
+/* Lange coderegels afbreken i.p.v. horizontaal scrollen. */
+.content pre code {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+/* Losse code-woorden in een zin (inline code) */
+.content :not(pre) > code {
+  background-color: var(--bs-secondary-bg);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.3rem;
+  font-size: 0.9em;
+  color: var(--primary-hover);
+}
+
+/* Tabellen */
+.content table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+.content th,
+.content td {
+  border: 1px solid var(--bs-border-color);
+  padding: 0.5rem 0.75rem;
+}
+.content th {
+  background-color: var(--bs-secondary-bg);
+}
+.content blockquote {
+  border-left: 4px solid var(--primary-hover);
+  padding-left: 1rem;
+  color: var(--bs-secondary-color);
+}
+
+/* Download-knoppen (Oplossingen-pagina) */
+.content .list-group-item .btn {
+  white-space: nowrap;
+}

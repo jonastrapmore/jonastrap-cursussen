@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Cursus — jonastrap.be</title>
+
+    <!-- Pas het opgeslagen thema meteen toe (zelfde 'theme'-sleutel als de hoofdsite),
+         zodat de pagina niet eerst licht oplicht en dan pas donker wordt. -->
+    <script>
+      document.documentElement.setAttribute(
+        "data-bs-theme",
+        localStorage.getItem("theme") ?? "light",
+      );
+    </script>
+
+    <!-- Bootstrap 5.3 (CSS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons (zelfde icoonset als de hoofdsite) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- highlight.js thema voor code-kleuring -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css"
+    />
+    <!-- Eigen CSS (huisstijl jonastrap.be + cursus) -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Bovenbalk: titel, dark-toggle, en (op mobiel) de knop om de zijbalk te openen -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler me-2 d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-label="Open menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand fw-bold trap-text-primary" href="#intro">
+          🟦 TypeScript Cursus
+        </a>
+        <div class="ms-auto">
+          <button
+            class="btn btn-sm fs-4"
+            id="theme-toggle"
+            type="button"
+            aria-label="Wissel thema"
+          >
+            <i id="theme-icon" class="bi bi-moon-stars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- ZIJBALK: op grote schermen vast; op mobiel een offcanvas-paneel. -->
+        <aside
+          class="offcanvas-lg offcanvas-start sidebar col-lg-3 col-xl-2 bg-body-tertiary border-end p-0"
+          tabindex="-1"
+          id="sidebar"
+        >
+          <div class="offcanvas-header d-lg-none">
+            <h5 class="offcanvas-title">Modules</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#sidebar"
+              aria-label="Sluiten"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <!-- Zoekbalk (filtert de modulelijst) -->
+            <input
+              id="search"
+              type="search"
+              class="form-control form-control-sm mb-3"
+              placeholder="Zoek een module..."
+            />
+            <!-- JavaScript bouwt hier de modulelijst in. -->
+            <nav class="nav flex-column" id="module-list"></nav>
+          </div>
+        </aside>
+
+        <!-- INHOUD: hier komt de gerenderde module-tekst. -->
+        <main class="col-lg-9 col-xl-10 py-4 px-md-5">
+          <div class="d-flex justify-content-end mb-3" id="content-toolbar" hidden>
+            <button class="btn btn-sm btn-outline-secondary" id="mark-read">
+              ✓ Markeer als gelezen
+            </button>
+          </div>
+
+          <article id="content" class="content"></article>
+        </main>
+      </div>
+    </div>
+
+    <!-- Externe libraries (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+    <!-- Onze site -->
+    <script src="js/course.js"></script>
+  </body>
+</html>
